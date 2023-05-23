@@ -22,12 +22,12 @@ class NotifyHelper {
     final AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings("appicon");
 
-//     final InitializationSettings initializationSettings =
-//         InitializationSettings(
-//             iOS: initializationSettingsIOS,
-//             android: initializationSettingsAndroid);
-//     await flutterLocalNotificationsPlugin.initialize(initializationSettings,
-//         onSelectNotification: selectNotification);
+    final InitializationSettings initializationSettings =
+        InitializationSettings(
+            iOS: initializationSettingsIOS,
+            android: initializationSettingsAndroid);
+    await flutterLocalNotificationsPlugin.initialize(initializationSettings,
+        onSelectNotification: selectNotification);
   }
 
   displayNotification({required String? title, required String? body}) async {
