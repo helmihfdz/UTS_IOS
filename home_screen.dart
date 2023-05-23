@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _taskController.loadTasks();
     notifyHelper = NotifyHelper();
     notifyHelper.initializeNotification();
-    notifyHelper.requestIOSPermissions();
+//     notifyHelper.requestIOSPermissions();
   }
 
   @override
