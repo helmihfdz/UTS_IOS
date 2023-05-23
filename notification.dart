@@ -22,12 +22,12 @@ class NotifyHelper {
     final AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings("appicon");
 
-    final InitializationSettings initializationSettings =
-        InitializationSettings(
-            iOS: initializationSettingsIOS,
-            android: initializationSettingsAndroid);
-    await flutterLocalNotificationsPlugin.initialize(initializationSettings,
-        onSelectNotification: selectNotification);
+//     final InitializationSettings initializationSettings =
+//         InitializationSettings(
+//             iOS: initializationSettingsIOS,
+//             android: initializationSettingsAndroid);
+//     await flutterLocalNotificationsPlugin.initialize(initializationSettings,
+//         onSelectNotification: selectNotification);
   }
 
   displayNotification({required String? title, required String? body}) async {
@@ -65,16 +65,16 @@ class NotifyHelper {
             UILocalNotificationDateInterpretation.absoluteTime);
   }
 
-  void requestIOSPermissions() {
-    flutterLocalNotificationsPlugin
-        .resolvePlatformSpecificImplementation<
-            IOSFlutterLocalNotificationsPlugin>()
-        ?.requestPermissions(
-          alert: true,
-          badge: true,
-          sound: true,
-        );
-  }
+//   void requestIOSPermissions() {
+//     flutterLocalNotificationsPlugin
+//         .resolvePlatformSpecificImplementation<
+//             IOSFlutterLocalNotificationsPlugin>()
+//         ?.requestPermissions(
+//           alert: true,
+//           badge: true,
+//           sound: true,
+//         );
+//   }
 
   Future selectNotification(String? payload) async {
     if (payload != null) {
